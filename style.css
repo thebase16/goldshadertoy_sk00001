@@ -1,65 +1,13 @@
-body{
-    background:#111;
-    height:300vh;
-    margin:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+body {
+    background: #111;
 }
 
-.gold{
-    font-size:7rem;
-    font-weight:900;
-    font-family:Georgia, serif;
-
-background:
-radial-gradient(circle at var(--lightX) var(--lightY),
-rgba(255,255,255,.95),
-rgba(255,255,255,.25) 8%,
-transparent 28%),
-
-linear-gradient(
-90deg,
-#6e4800 0%,
-#f4d26b 12%,
-#fff5cc 20%,
-#bb8400 32%,
-#fff2a8 44%,
-#916200 55%,
-#ffd76a 68%,
-#6a4300 82%,
-#2f1d00 100%
-),
-
-linear-gradient(
-180deg,
-rgba(255,255,255,.18),
-transparent 50%,
-rgba(0,0,0,.18)
-);
-
-    background-size:180% 180%;
-    background-position:center;
-
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-
-    animation:idleShimmer 10s ease-in-out infinite;
-}
-
-@keyframes idleShimmer{
-
-    0%{
-        background-position:40% 50%;
-    }
-
-    50%{
-        background-position:60% 45%;
-    }
-
-    100%{
-        background-position:40% 50%;
-    }
-
+.gold {
+    font-size: 100px;
+    font-weight: bold;
+    background: linear-gradient(90deg, red, yellow, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
