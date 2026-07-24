@@ -1,21 +1,34 @@
 const gold = document.querySelector(".gold");
 
-if (gold) {
 
-    window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
 
-        const y = window.scrollY;
+    const scroll = window.scrollY;
 
-        gold.style.setProperty(
-            "--lightY",
-            `${20 + y * 0.02}%`
-        );
+    const movement = scroll / 10;
 
-        gold.style.setProperty(
-            "--lightX",
-            `${50 + Math.sin(y / 250) * 8}%`
-        );
 
-    });
+    gold.style.setProperty(
+        "--lightX",
+        `${50 + Math.sin(scroll / 300) * 25}%`
+    );
 
-}
+
+    gold.style.setProperty(
+        "--lightY",
+        `${20 + scroll / 30}%`
+    );
+
+
+    gold.style.setProperty(
+        "--goldX",
+        `${40 + movement}%`
+    );
+
+
+    gold.style.setProperty(
+        "--goldY",
+        `${50 + movement / 2}%`
+    );
+
+});

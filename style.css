@@ -1,62 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: #111;
-    min-height: 300vh;
     margin: 0;
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.hero {
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
+
 
 .gold {
-    font-size: 7rem;
+
+    font-size: clamp(8rem, 20vw, 22rem);
     font-weight: 900;
-    font-family: Georgia, serif;
+    letter-spacing: -0.05em;
 
     background:
-        radial-gradient(
-            circle at var(--lightX, 50%) var(--lightY, 20%),
-            rgba(255,255,255,0.95),
-            rgba(255,255,255,0.3) 12%,
-            transparent 35%
-        ),
 
-        linear-gradient(
-            115deg,
-            #2d1900 0%,
-            #6f4700 12%,
-            #d8ab2f 25%,
-            #fff7d0 35%,
-            #b87800 48%,
-            #fff1a6 60%,
-            #9a6500 72%,
-            #f5d36a 85%,
-            #2d1900 100%
-        );
+    /* moving light reflection */
+    radial-gradient(
+        circle at var(--lightX) var(--lightY),
+        white 0%,
+        rgba(255,255,255,.8) 5%,
+        transparent 18%
+    ),
 
-    background-size: 180% 180%;
-    background-position: center;
+    /* metallic gold bands */
+    linear-gradient(
+        120deg,
+        #211200 0%,
+        #704900 12%,
+        #d6a72c 22%,
+        #fff4bd 30%,
+        #a96f00 42%,
+        #ffe890 55%,
+        #9a6100 68%,
+        #f7d774 82%,
+        #2a1700 100%
+    );
 
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
 
-    animation: goldShimmer 10s ease-in-out infinite;
+    background-size:
+        200% 200%,
+        200% 200%;
+
+
+    background-position:
+        var(--lightX) var(--lightY),
+        var(--goldX) var(--goldY);
+
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+    color:transparent;
+
+
+    animation:
+        idleGold 8s ease-in-out infinite;
+
 }
 
 
-@keyframes goldShimmer {
+@keyframes idleGold {
 
-    0% {
-        background-position: 40% 50%;
+    0%,100% {
+        --goldX:40%;
+        --goldY:50%;
     }
 
     50% {
-        background-position: 60% 45%;
+        --goldX:60%;
+        --goldY:45%;
     }
 
-    100% {
-        background-position: 40% 50%;
-    }
+}
 
-}  
+
+.spacer {
+    height:250vh;
+}
