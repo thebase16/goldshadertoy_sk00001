@@ -1,0 +1,29 @@
+.gold-shimmer {
+  font-size: 4rem;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(
+    135deg, 
+    #b38728 0%, 
+    #fbf5b7 25%, 
+    #dda73a 50%, 
+    #fbf5b7 75%, 
+    #b38728 100%
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Modern CSS Scroll-Driven Animation */
+  animation: goldShift linear;
+  animation-timeline: scroll();
+}
+
+@keyframes goldShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
