@@ -12,26 +12,31 @@ body{
     font-weight:900;
     font-family:Georgia, serif;
 
-    background:
-        radial-gradient(
-            circle at var(--lightX,50%) var(--lightY,20%),
-            rgba(255,255,255,.95),
-            rgba(255,255,255,.35) 12%,
-            transparent 35%
-        ),
+background:
+radial-gradient(circle at var(--lightX) var(--lightY),
+rgba(255,255,255,.95),
+rgba(255,255,255,.25) 8%,
+transparent 28%),
 
-        linear-gradient(
-            115deg,
-            #3d2b00 0%,
-            #8a5a00 12%,
-            #ffe79d 22%,
-            #c79200 34%,
-            #fff3b6 44%,
-            #a36f00 56%,
-            #ffd86b 70%,
-            #755000 82%,
-            #2f2200 100%
-        );
+linear-gradient(
+90deg,
+#6e4800 0%,
+#f4d26b 12%,
+#fff5cc 20%,
+#bb8400 32%,
+#fff2a8 44%,
+#916200 55%,
+#ffd76a 68%,
+#6a4300 82%,
+#2f1d00 100%
+),
+
+linear-gradient(
+180deg,
+rgba(255,255,255,.18),
+transparent 50%,
+rgba(0,0,0,.18)
+);
 
     background-size:180% 180%;
     background-position:center;
