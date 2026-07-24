@@ -1,13 +1,62 @@
 body {
     background: #111;
+    min-height: 300vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gold {
-    font-size: 100px;
-    font-weight: bold;
-    background: linear-gradient(90deg, red, yellow, blue);
+    font-size: 7rem;
+    font-weight: 900;
+    font-family: Georgia, serif;
+
+    background:
+        radial-gradient(
+            circle at var(--lightX, 50%) var(--lightY, 20%),
+            rgba(255,255,255,0.95),
+            rgba(255,255,255,0.3) 12%,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            115deg,
+            #2d1900 0%,
+            #6f4700 12%,
+            #d8ab2f 25%,
+            #fff7d0 35%,
+            #b87800 48%,
+            #fff1a6 60%,
+            #9a6500 72%,
+            #f5d36a 85%,
+            #2d1900 100%
+        );
+
+    background-size: 180% 180%;
+    background-position: center;
+
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+
+    animation: goldShimmer 10s ease-in-out infinite;
+}
+
+
+@keyframes goldShimmer {
+
+    0% {
+        background-position: 40% 50%;
+    }
+
+    50% {
+        background-position: 60% 45%;
+    }
+
+    100% {
+        background-position: 40% 50%;
+    }
+
 }
